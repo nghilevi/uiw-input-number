@@ -67,7 +67,12 @@ To run the unit tests for the components, run:
 ```bash
 npm test
 ```
+### Known problems/limitations
+input number currently supports only integer values
+it is possible to manually enter fractions (for example 10.9) but the value will be still 10. That said if max value is 10 and user manually enters 10.9 it will not show error about max value
 
+### Honorable mentions
+the width of input field is changing dynamicaly based on lenght of number (max width is to fix the parent container)
 
 ## Support
 
