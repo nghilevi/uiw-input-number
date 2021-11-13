@@ -1,33 +1,33 @@
 
 
 // HEADER
-.ncc-input-number__header {
+.uiw-input-number__header {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     margin-bottom: $space-xs;
-    @include ncc-font('font-medium', 'regular');
+    @include uiw-font('font-medium', 'regular');
 }
 
-.ncc-input-number__header__label {
-    .ncc-input-number--error & {
+.uiw-input-number__header__label {
+    .uiw-input-number--error & {
         color: $color-accent-dark-red;
     }
 }
 
-.ncc-input-number__header__optional-label {
+.uiw-input-number__header__optional-label {
     color: $color-dark-gray;
 }
 
 // FIELD CONTAINER
-.ncc-input-number__field-container {
+.uiw-input-number__field-container {
     align-items: center;
     display: flex;
     padding: $space-xs 0;
 }
 
 // BUTTONS
-.ncc-input-number__field-container__button {
+.uiw-input-number__field-container__button {
     $size: 32px;
 
     align-items: center;
@@ -68,7 +68,7 @@
 }
 
 // INPUT
-.ncc-input-number__field-container__input {
+.uiw-input-number__field-container__input {
     background-color: transparent;
     border: 0;
     flex: 0 1 auto;
@@ -78,8 +78,8 @@
     outline: 0;
     text-align: center;
     -webkit-appearance: none;
-    width: var(--nccInputNumberInputWidth);
-    @include ncc-font('font-xlarge', 'medium');
+    width: var(--uiwInputNumberInputWidth);
+    @include uiw-font('font-xlarge', 'medium');
 
     &::-ms-clear {
         display: none;
@@ -103,39 +103,39 @@
 }
 
 // FOOTER
-.ncc-input-number__footer {
+.uiw-input-number__footer {
     display: flex;
     flex-flow: column;
-    @include ncc-font('font-medium', 'regular');
+    @include uiw-font('font-medium', 'regular');
 }
 
-.ncc-input-number__footer__hint {
+.uiw-input-number__footer__hint {
     margin-top: $space-xs;
     color: $color-dark-gray;
 }
 
-.ncc-input-number__footer__error {
+.uiw-input-number__footer__error {
     align-items: center;
     color: $color-accent-dark-red;
     display: flex;
     margin-top: $space-xs;
 }
 
-.ncc-input-number__footer__error__icon {
+.uiw-input-number__footer__error__icon {
     margin-right: $space-s;
 }
 
 @mixin stylesForDarkMode {
-    .ncc-input-number__header__label {
+    .uiw-input-number__header__label {
         color: $color-white;
     }
-    .ncc-input-number--error .ncc-input-number__header__label {
+    .uiw-input-number--error .uiw-input-number__header__label {
         color: $color-accent-red;
     }
-    .ncc-input-number__header__optional-label {
+    .uiw-input-number__header__optional-label {
         color: $color-medium-gray;
     }
-    .ncc-input-number__field-container__button {
+    .uiw-input-number__field-container__button {
         color: $color-medium-blue;
         border-color: $color-medium-blue;
         &:focus {
@@ -155,26 +155,26 @@
             color: $color-dark-gray;
         }
     }
-    .ncc-input-number__field-container__input {
+    .uiw-input-number__field-container__input {
         color: $color-white;
         &:disabled {
             color: $color-dark-gray;
         }
     }
-    .ncc-input-number__footer__error {
+    .uiw-input-number__footer__error {
         color: $color-accent-red;
     }
-    .ncc-input-number__footer__hint {
+    .uiw-input-number__footer__hint {
         color: $color-medium-gray;
     }
 }
 
 @media (prefers-color-scheme: dark) {
-    .ncc-enable-dark-mode {
+    .uiw-enable-dark-mode {
         @include stylesForDarkMode();
     }
 }
-.ncc-enforce-dark-mode {
+.uiw-enforce-dark-mode {
     @include stylesForDarkMode();
 }
 

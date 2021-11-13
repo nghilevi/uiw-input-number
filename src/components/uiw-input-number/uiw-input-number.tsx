@@ -12,7 +12,7 @@ import {
 import { ValidatorFn } from '../../global/errorHandler'
 import { bem } from '../../global/bem'
 
-const block = 'ncc-input-number'
+const block = 'uiw-input-number'
 
 type InputEvent = Event & {
     target?: HTMLInputElement
@@ -111,7 +111,7 @@ export class UiwInputNumber {
   updateInputWidth(value: string) {
       const valueLength = value ? value.length : 1
       this.inputElementRef.style.setProperty(
-          '--nccInputNumberInputWidth',
+          '--uiwInputNumberInputWidth',
           `${valueLength}ch`
       )
   }
