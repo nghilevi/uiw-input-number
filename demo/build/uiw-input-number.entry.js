@@ -40,12 +40,12 @@ const block = 'ncc-input-number';
 let UiwInputNumber = class {
   constructor(hostRef) {
     registerInstance(this, hostRef);
-    this.nwccInputNumberChange = createEvent(this, "nwccInputNumberChange", 7);
-    this.nwccInputNumberInputChange = createEvent(this, "nwccInputNumberInputChange", 7);
-    this.nwccInputNumberInputFocus = createEvent(this, "nwccInputNumberInputFocus", 7);
-    this.nwccInputNumberInputBlur = createEvent(this, "nwccInputNumberInputBlur", 7);
-    this.nwccInputNumberDecreaseClick = createEvent(this, "nwccInputNumberDecreaseClick", 7);
-    this.nwccInputNumberIncreaseClick = createEvent(this, "nwccInputNumberIncreaseClick", 7);
+    this.uiwInputNumberChange = createEvent(this, "uiwInputNumberChange", 7);
+    this.uiwInputNumberInputChange = createEvent(this, "uiwInputNumberInputChange", 7);
+    this.uiwInputNumberInputFocus = createEvent(this, "uiwInputNumberInputFocus", 7);
+    this.uiwInputNumberInputBlur = createEvent(this, "uiwInputNumberInputBlur", 7);
+    this.uiwInputNumberDecreaseClick = createEvent(this, "uiwInputNumberDecreaseClick", 7);
+    this.uiwInputNumberIncreaseClick = createEvent(this, "uiwInputNumberIncreaseClick", 7);
     this.placeholder = '';
     this.max = Number.MAX_SAFE_INTEGER;
     this.min = Number.MIN_SAFE_INTEGER;
@@ -111,22 +111,22 @@ let UiwInputNumber = class {
     this.updateInputWidth(this.valueString);
     this.updateDisabledStates();
     this.validateInline(this.value);
-    this.nwccInputNumberChange.emit(this.value);
-    this.nwccInputNumberInputChange.emit(this.value);
+    this.uiwInputNumberChange.emit(this.value);
+    this.uiwInputNumberInputChange.emit(this.value);
   }
   onInputFocus(e) {
-    this.nwccInputNumberInputFocus.emit(e);
+    this.uiwInputNumberInputFocus.emit(e);
   }
   onInputBlur(e) {
-    this.nwccInputNumberInputBlur.emit(e);
+    this.uiwInputNumberInputBlur.emit(e);
   }
   onButtonDecreaseClick() {
     this.onButtonClick(-1);
-    this.nwccInputNumberDecreaseClick.emit(this.value);
+    this.uiwInputNumberDecreaseClick.emit(this.value);
   }
   onButtonIncreaseClick() {
     this.onButtonClick(1);
-    this.nwccInputNumberIncreaseClick.emit(this.value);
+    this.uiwInputNumberIncreaseClick.emit(this.value);
   }
   onButtonClick(direction) {
     this.value = Math.min(Math.max(this.value === undefined || isNaN(this.value)
@@ -136,7 +136,7 @@ let UiwInputNumber = class {
     this.updateInputWidth(this.valueString);
     this.updateDisabledStates();
     this.validateInline(this.value);
-    this.nwccInputNumberChange.emit(this.value);
+    this.uiwInputNumberChange.emit(this.value);
   }
   validateRequired(value) {
     var _a;

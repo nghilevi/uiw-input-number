@@ -60,12 +60,12 @@ export class UiwInputNumber {
       this.errorState = newError
   }
 
-  @Event() nwccInputNumberChange: EventEmitter<number>
-  @Event() nwccInputNumberInputChange: EventEmitter<number>
-  @Event() nwccInputNumberInputFocus: EventEmitter<FocusEvent>
-  @Event() nwccInputNumberInputBlur: EventEmitter<FocusEvent>
-  @Event() nwccInputNumberDecreaseClick: EventEmitter<number>
-  @Event() nwccInputNumberIncreaseClick: EventEmitter<number>
+  @Event() uiwInputNumberChange: EventEmitter<number>
+  @Event() uiwInputNumberInputChange: EventEmitter<number>
+  @Event() uiwInputNumberInputFocus: EventEmitter<FocusEvent>
+  @Event() uiwInputNumberInputBlur: EventEmitter<FocusEvent>
+  @Event() uiwInputNumberDecreaseClick: EventEmitter<number>
+  @Event() uiwInputNumberIncreaseClick: EventEmitter<number>
 
   private inputElementRef: HTMLElement
 
@@ -134,26 +134,26 @@ export class UiwInputNumber {
       this.updateInputWidth(this.valueString)
       this.updateDisabledStates()
       this.validateInline(this.value)
-      this.nwccInputNumberChange.emit(this.value)
-      this.nwccInputNumberInputChange.emit(this.value)
+      this.uiwInputNumberChange.emit(this.value)
+      this.uiwInputNumberInputChange.emit(this.value)
   }
 
   onInputFocus(e: FocusEvent) {
-      this.nwccInputNumberInputFocus.emit(e)
+      this.uiwInputNumberInputFocus.emit(e)
   }
 
   onInputBlur(e: FocusEvent) {
-      this.nwccInputNumberInputBlur.emit(e)
+      this.uiwInputNumberInputBlur.emit(e)
   }
 
   onButtonDecreaseClick() {
       this.onButtonClick(-1)
-      this.nwccInputNumberDecreaseClick.emit(this.value)
+      this.uiwInputNumberDecreaseClick.emit(this.value)
   }
 
   onButtonIncreaseClick() {
       this.onButtonClick(1)
-      this.nwccInputNumberIncreaseClick.emit(this.value)
+      this.uiwInputNumberIncreaseClick.emit(this.value)
   }
 
   onButtonClick(direction: number) {
@@ -170,7 +170,7 @@ export class UiwInputNumber {
       this.updateInputWidth(this.valueString)
       this.updateDisabledStates()
       this.validateInline(this.value)
-      this.nwccInputNumberChange.emit(this.value)
+      this.uiwInputNumberChange.emit(this.value)
 
   }
 

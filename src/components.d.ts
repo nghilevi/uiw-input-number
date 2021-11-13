@@ -50,12 +50,12 @@ declare namespace LocalJSX {
         "max"?: number;
         "min"?: number;
         "name"?: string;
-        "onNwccInputNumberChange"?: (event: CustomEvent<number>) => void;
-        "onNwccInputNumberDecreaseClick"?: (event: CustomEvent<number>) => void;
-        "onNwccInputNumberIncreaseClick"?: (event: CustomEvent<number>) => void;
-        "onNwccInputNumberInputBlur"?: (event: CustomEvent<FocusEvent>) => void;
-        "onNwccInputNumberInputChange"?: (event: CustomEvent<number>) => void;
-        "onNwccInputNumberInputFocus"?: (event: CustomEvent<FocusEvent>) => void;
+        "onUiwInputNumberChange"?: (event: CustomEvent<number>) => void;
+        "onUiwInputNumberDecreaseClick"?: (event: CustomEvent<number>) => void;
+        "onUiwInputNumberIncreaseClick"?: (event: CustomEvent<number>) => void;
+        "onUiwInputNumberInputBlur"?: (event: CustomEvent<FocusEvent>) => void;
+        "onUiwInputNumberInputChange"?: (event: CustomEvent<number>) => void;
+        "onUiwInputNumberInputFocus"?: (event: CustomEvent<FocusEvent>) => void;
         "optionalLabel"?: string;
         "placeholder"?: string;
         "required"?: boolean;
